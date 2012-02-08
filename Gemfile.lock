@@ -5,12 +5,21 @@ GIT
   specs:
     perftools.rb (0.5.6)
 
+GIT
+  remote: git://github.com/cjbottaro/schizo.git
+  revision: 2695d468ace776be3aadf47492bbb4fa67bd0217
+  specs:
+    schizo (0.1.0)
+
 GEM
   remote: http://rubygems.org/
   specs:
+    mixology (0.2.0)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
+  mixology
   perftools.rb!
+  schizo!
