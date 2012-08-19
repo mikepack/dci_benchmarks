@@ -13,7 +13,7 @@ end
 class Context
   using Runner
 
-  def self.run
+  def self.call
     user = User.new
     user.run
   end
@@ -23,7 +23,7 @@ Benchmark.bm do |bench|
   3.times do
     bench.report('refine') do
       1000000.times do
-        Context.run
+        Context.call
       end
     end
   end
