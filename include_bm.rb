@@ -6,7 +6,7 @@ class IncludeUser
 end
 
 class Context
-  def self.run
+  def self.call
     user = IncludeUser.new
     user.run
   end
@@ -16,7 +16,7 @@ Benchmark.bm do |bench|
   3.times do
     bench.report('include') do
       1000000.times do
-        Context.run
+        Context.call
       end
     end
   end
